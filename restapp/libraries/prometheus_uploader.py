@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from prometheus_client import start_http_server, Summary, CollectorRegistry, Gauge, push_to_gateway
-from .measurements import MEASUREMENTS, SWITCHER
+from .measurements import MEASUREMENTS
 import random
 import time
 
