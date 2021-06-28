@@ -1,0 +1,39 @@
+version: "3.3"
+services:
+    minio:
+        image: minio/minio
+        network_mode: host
+        ports:
+        - "9000:9000"
+        command:  server /data
+        volumes: 
+        - "./data:/data"
+        environment: 
+        - "MINIO_PROMETHEUS_AUTH_TYPE=public"
+        - "MINIO_ACCESS_KEY=minio"
+        - "MINIO_SECRET_KEY=minio123"
+    createbuckets:
+        image: minio/mc
+        depends_on:
+        - minio
+        network_mode: host
+        entrypoint: >
+            /bin/sh -c "
+            /usr/bin/mc alias set minio http://127.0.0.1:9000 minio minio123 --api S3v4;
+            /usr/bin/mc mb minio/logs-app-bucket;
+            "
+    grafana:
+        image: grafana/grafana
+        network_mode: host
+        ports:
+            - "3000:3000"
+        volumes:
+            - "./provisioning:/etc/grafana/provisioning"
+    prometheus:
+        image: prom/prometheus
+        volumes:
+            - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+        ports:
+            - "9090:9090"
+        network_mode: host
+
