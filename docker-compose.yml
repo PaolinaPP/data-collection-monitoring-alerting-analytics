@@ -48,4 +48,4 @@ services:
             - "5000:5000"
         volumes:
             - ./restapp:/usr/src/app
-
+            - /etc/localtime:/etc/localtime

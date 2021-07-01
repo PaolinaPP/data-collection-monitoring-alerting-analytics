@@ -12,7 +12,6 @@ class PrometheusClient:
         self.measurements_list = {}
     
     def create_measurement_gauge(self, measurement):
-        print("Measurement: {}".format(measurement))
         measurement_gauge = Gauge(
                     measurement,
                     'Measurement value.'
@@ -26,3 +25,4 @@ class PrometheusClient:
             if measurement["measurement"] not in self.measurements_list:
                 self.measurements_list[measurement["measurement"]] = self.create_measurement_gauge(measurement["measurement"])
             self.measurements_list[measurement["measurement"]].set(measurement["value"])
+        return True
