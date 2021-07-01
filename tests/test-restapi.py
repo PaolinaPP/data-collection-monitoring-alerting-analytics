@@ -3,16 +3,15 @@ import json
 import time
 
 payload = {
-  "place": "hol",
   "measurements":
     [
         { 
             "measurement": "temperature",
-            "value" : "21.0"
+            "value" : "23.0"
         },
         {
             "measurement": "humidity",
-            "value" : "25.0"
+            "value" : "27.0"
         }
     ]
 }

@@ -2,6 +2,7 @@ version: "3.3"
 services:
     minio:
         image: minio/minio
+        container_name: minio
         network_mode: host
         ports:
         - "9000:9000"
@@ -14,6 +15,7 @@ services:
         - "MINIO_SECRET_KEY=minio123"
     createbuckets:
         image: minio/mc
+        container_name: minio-client
         depends_on:
         - minio
         network_mode: host
@@ -24,6 +26,7 @@ services:
             "
     grafana:
         image: grafana/grafana
+        container_name: grafana
         network_mode: host
         ports:
             - "3000:3000"
@@ -31,9 +34,18 @@ services:
             - "./provisioning:/etc/grafana/provisioning"
     prometheus:
         image: prom/prometheus
+        container_name: prometheus
         volumes:
             - "./prometheus.yml:/etc/prometheus/prometheus.yml"
         ports:
             - "9090:9090"
         network_mode: host
+    restapp:
+        container_name: restapp
+        build: ./restapp
+        network_mode: host
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./restapp:/usr/src/app
 

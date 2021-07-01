@@ -25,5 +25,4 @@ class PrometheusClient:
             print(measurement)
             if measurement["measurement"] not in self.measurements_list:
                 self.measurements_list[measurement["measurement"]] = self.create_measurement_gauge(measurement["measurement"])
-                print("measuremnt gaude created")
             self.measurements_list[measurement["measurement"]].set(measurement["value"])

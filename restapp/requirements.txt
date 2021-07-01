@@ -1,0 +1,4 @@
+minio==7.0.3
+prometheus_client==0.11.0
+Flask==2.0.1
+MarkupSafe==2.0.1

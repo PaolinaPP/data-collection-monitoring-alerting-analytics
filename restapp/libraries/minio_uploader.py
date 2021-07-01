@@ -21,20 +21,17 @@ class MinioClient():
         )
 
     def generate_minio_filename(self, measurement):
-        return str(self.data["place"]) + '/' + \
-               str(self.datetime_now.strftime("%d-%m-%Y")) + '/' + \
+        return str(self.datetime_now.strftime("%d-%m-%Y")) + '/' + \
                str(self.datetime_now.strftime("%H:%M:%S")) + '/' + \
                str(measurement["measurement"]) + ".json"
 
     def write_to_minio(self):
         for measurement in self.data["measurements"]:
-            print(measurement)
             file_contant = measurement["value"]
             with open('data.json', 'w') as f:
                 json.dump(file_contant, f)
             local_path = os.getcwd() + '/data.json'
             minio_filename = self.generate_minio_filename(measurement)
-            print(minio_filename)
             self.client.fput_object(self.bucket, minio_filename, local_path)  
 
     def check_bucket(self):
