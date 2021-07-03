@@ -29,9 +29,11 @@ def post():
     now = datetime.now()
     if not prom.process_request(data):
         print("Prometheus problem.")
+        abort(500)
     minio.check_bucket()
     if not minio.write_to_minio(data, now):
         print("Minio problem.")
+        abort(500)
     return {'success': 'success'}
 
 if __name__ == '__main__':

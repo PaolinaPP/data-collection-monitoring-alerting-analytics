@@ -47,18 +47,18 @@ def add_measurement_in_dashboard(measurement, final_dashboard):
     panel_template["id"] = panels_len+2
     final_dashboard["panels"].append(row_template)
     final_dashboard["panels"].append(panel_template)
-    print(final_dashboard)
+    print("Dashboard is successfully created.")
     return final_dashboard
 
 def create_dashboard(given_measurements):
     check_for_supported_measurements(given_measurements)
     final_dashboard = get_dashboard_template()
     for measurement in given_measurements:
-        print(measurement)
         final_dashboard = add_measurement_in_dashboard(measurement,
                                                        final_dashboard)
     with open(get_dashboard_path(), 'w') as f:
         json.dump(final_dashboard, f)
+    return True
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
