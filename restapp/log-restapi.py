@@ -12,6 +12,7 @@ from libraries.measurements import MEASUREMENTS
 app = Flask(__name__)
 prom = pu.PrometheusClient()
 minio = mu.MinioClient("logs-app-bucket")
+to_sleep = True
 
 def check_for_correct_measurement(measurement):
     if measurement["measurement"] in MEASUREMENTS:
@@ -21,16 +22,20 @@ def check_for_correct_measurement(measurement):
 
 @app.route('/', methods=['POST'])
 def post():
+    global to_sleep
     data = json.loads(request.data)
     for measurement in data["measurements"]:
         if not check_for_correct_measurement(measurement):
             print("Unsupported measurement {}".format(measurement["measurement"]))
             abort(500)
-    now = datetime.now()
     if not prom.process_request(data):
         print("Prometheus problem.")
         abort(500)
     minio.check_bucket()
+    if to_sleep:
+        time.sleep(15)
+        to_sleep = False
+    now = datetime.now()
     if not minio.write_to_minio(data, now):
         print("Minio problem.")
         abort(500)

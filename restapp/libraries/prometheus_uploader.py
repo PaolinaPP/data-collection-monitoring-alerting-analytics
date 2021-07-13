@@ -9,6 +9,7 @@ class PrometheusClient:
 
     def __init__(self):
         start_http_server(8000)
+        self.registry = CollectorRegistry()
         self.measurements_list = {}
     
     def create_measurement_gauge(self, measurement):

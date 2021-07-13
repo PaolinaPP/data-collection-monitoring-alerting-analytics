@@ -18,7 +18,12 @@ class MinioClient():
             secure = False
         )
 
+    def round_sec(self, datetime_now):
+        sec = datetime_now.strftime("%S")
+        print("Seconds are "+str(sec))
+
     def generate_minio_filename(self, datetime_now, measurement):
+        self.round_sec(datetime_now)
         return str(datetime_now.strftime("%d-%m-%Y")) + '/' + \
                str(datetime_now.strftime("%H:%M:%S")) + '/' + \
                str(measurement["measurement"]) + ".json"

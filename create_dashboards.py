@@ -47,7 +47,6 @@ def add_measurement_in_dashboard(measurement, final_dashboard):
     panel_template["id"] = panels_len+2
     final_dashboard["panels"].append(row_template)
     final_dashboard["panels"].append(panel_template)
-    print("Dashboard is successfully created.")
     return final_dashboard
 
 def create_dashboard(given_measurements):
@@ -58,6 +57,7 @@ def create_dashboard(given_measurements):
                                                        final_dashboard)
     with open(get_dashboard_path(), 'w') as f:
         json.dump(final_dashboard, f)
+    print("Dashboard is successfully created.")
     return True
 
 if __name__ == '__main__':
