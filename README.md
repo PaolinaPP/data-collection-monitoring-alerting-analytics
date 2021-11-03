@@ -8,29 +8,33 @@ Every component of the system is living in a separate docker container. Docker C
 
 ### RESTful API
 RESTful API is Python application which collects data from the users and sends it to MinIO and Prometheus. The implementation of the application is in [./restapp](https://github.com/PaolinaPP/iot-data-collection-and-monitoring/tree/master/restapp) folder. The application receives data in a specific json format: \
-{ \
- "measurements": \
-   [ \
-       { \
-           "measurement": "...", \
-           "value" : "..." \
-       }, \
-       { \
-           "measurement": "...", \
-           "value" : "..." \
-       } \
-   ] \
+<pre>
+{ 
+ "measurements": 
+   [
+       {
+           "measurement": "...",
+           "value" : "..."
+       },
+       {
+           "measurement": "...",
+           "value" : "..."
+       }
+   ]
+</pre>
 
 ### MinIO
 MinIO stores data on the local device. The data is located in **./data** folder in the project directory. All the data is stored in **./data/logs-app-bucket**. The data for each day is stored in different directories (the name of the directory is the day), thus data for different days can be analyzed. The directory for the day has subdirectories whose names are the time at which the system received the measurement data. The time directories contain the files with measurement data, and the file names represent the type of measurement (eg temperature, humidity, etc.).\
-logs-app-bucket/ \
-└── 30-06-2021	\
-    ├── 14:12:29 \
-    │   ├── humidity.json \
-    │   └── temperature.json	 \
-    └── 14:13:41 \
-        ├── humidity.json	  \
-        └── temperature.json \
+<pre>
+logs-app-bucket/
+└── 30-06-2021
+    ├── 14:12:29
+    │   ├── humidity.json
+    │   └── temperature.json
+    └── 14:13:41
+        ├── humidity.json	 
+        └── temperature.json
+</pre>
 The access to the MinIO user interface is done through a browser - the address where it is located is **http://localhost:9000/**.
 
 ### Prometheus
@@ -38,12 +42,14 @@ Promethes collects data from Python RESTful API and provides this data to Grafan
 
 ### Grafana
 Grafana is used to monitors IOT data. The [./provisioning](https://github.com/PaolinaPP/iot-data-collection-and-monitoring/tree/master/provisioning) directory contains pre-created dashboards, as well as configuration files that tell Grafana where to look for the data provided by Prometheus. The distribution in the [./provisioning](https://github.com/PaolinaPP/iot-data-collection-and-monitoring/tree/master/provisioning) directory is the same as it should be in the **/etc/grafana/provisioning** directory in the container: \
-provisioning/ \
-├── dashboards \
-│   ├── dashboards.yml \
-│   └── Measurements.json \
-└── datasources \
-    └── prom.yml \
+<pre>
+provisioning/ 
+├── dashboards 
+│   ├── dashboards.yml 
+│   └── Measurements.json 
+└── datasources 
+    └── prom.yml 
+</pre>
 
 ### Requirements
 - Python3
