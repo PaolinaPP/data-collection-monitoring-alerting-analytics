@@ -77,4 +77,5 @@ To check the system is successfully started need to run the next command and ver
 ```
 docker ps
 ```
-Once the system is up and running, it is ready to collect and visualize user data. For this purpose, user must provide data in a predefined format at http://127.0.0.1:5000. \[Here](https://github.com/PaolinaPP/iot-data-collection-and-monitoring/blob/master/tests/test-restapi.py) you can find an example how to send data to the system.
+Once the system is up and running, it is ready to collect and visualize user data. For this purpose, user must provide data in a predefined format at http://127.0.0.1:5000. 
+[Here](https://github.com/PaolinaPP/iot-data-collection-and-monitoring/blob/master/tests/test-restapi.py) you can find an example how to send data to the system.
