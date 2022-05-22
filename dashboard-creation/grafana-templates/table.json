@@ -1,0 +1,67 @@
+[
+    {
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {
+        "color": {
+            "mode": "thresholds"
+        },
+        "custom": {
+            "align": null,
+            "filterable": false
+        },
+        "mappings": [],
+        "thresholds": {
+            "mode": "absolute",
+            "steps": [
+            {
+                "color": "green",
+                "value": null
+            },
+            {
+                "color": "red",
+                "value": 80
+            }
+            ]
+        },
+        "unit": "short"
+        },
+        "overrides": []
+    },
+    "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+    },
+    "id": 4,
+    "options": {
+        "frameIndex": 1,
+        "showHeader": true,
+        "sortBy": [
+        {
+            "desc": false,
+            "displayName": "Time"
+        }
+        ]
+    },
+    "pluginVersion": "7.5.7",
+    "targets": [
+        
+    ],
+    "title": "Panel Title",
+    "type": "table"
+    },
+    {
+    "datasource": null,
+    "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 8
+    },
+    "id": 2,
+    "title": "Row title",
+    "type": "row"
+    }
+]

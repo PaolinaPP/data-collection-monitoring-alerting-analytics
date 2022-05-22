@@ -1,23 +1,23 @@
-version: "3.3"
+version: "3.4"
 services:
     minio:
         image: minio/minio
         container_name: minio
         network_mode: host
         ports:
-        - "9000:9000"
+            - "9000:9000"
         command:  server /data
         volumes: 
-        - "./data:/data"
+            - "./data:/data"
         environment: 
-        - "MINIO_PROMETHEUS_AUTH_TYPE=public"
-        - "MINIO_ACCESS_KEY=minio"
-        - "MINIO_SECRET_KEY=minio123"
+            - "MINIO_PROMETHEUS_AUTH_TYPE=public"
+            - "MINIO_ACCESS_KEY=minio"
+            - "MINIO_SECRET_KEY=minio123"
     createbuckets:
         image: minio/mc
         container_name: minio-client
         depends_on:
-        - minio
+            - minio
         network_mode: host
         entrypoint: >
             /bin/sh -c "

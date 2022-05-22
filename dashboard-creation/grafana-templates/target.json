@@ -1,0 +1,8 @@
+{
+    "exemplar": true,
+    "expr": "measurement",
+    "hide": false,
+    "interval": "",
+    "legendFormat": "",
+    "refId": "A"
+}

@@ -7,11 +7,11 @@ payload = {
   "measurements":
     [
         { 
-            "measurement": "temperature_kitchen",
+            "measurement": "temperature",
             "value" : "23.0"
         },
         { 
-            "measurement": "temperature_bedroom",
+            "measurement": "humidity",
             "value" : "23.0"
         }
     ]

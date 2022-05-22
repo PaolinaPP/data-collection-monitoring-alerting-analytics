@@ -1,0 +1,88 @@
+[
+    {
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {
+        "color": {
+            "mode": "palette-classic"
+        },
+        "mappings": [],
+        "thresholds": {
+            "mode": "absolute",
+            "steps": [
+            {
+                "color": "green",
+                "value": null
+            },
+            {
+                "color": "red",
+                "value": 80
+            }
+            ]
+        }
+        },
+        "overrides": []
+    },
+    "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+    },
+    "id": 4,
+    "options": {
+        "displayLabels": [],
+        "legend": {
+        "displayMode": "list",
+        "placement": "right",
+        "values": []
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+        "calcs": [
+            "lastNotNull"
+        ],
+        "fields": "",
+        "values": false
+        },
+        "text": {}
+    },
+    "pluginVersion": "7.5.7",
+    "targets": [
+        
+    ],
+    "timeFrom": null,
+    "timeShift": null,
+    "title": "Panel Title",
+    "type": "piechart"
+    },
+    {
+    "dashboardFilter": "",
+    "dashboardTags": [],
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+    },
+    "folderId": null,
+    "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 8
+    },
+    "id": 2,
+    "limit": 10,
+    "nameFilter": "",
+    "onlyAlertsOnDashboard": false,
+    "pluginVersion": "7.5.7",
+    "show": "current",
+    "sortOrder": 1,
+    "stateFilter": [],
+    "targets": [
+        
+    ],
+    "title": "Panel Title",
+    "type": "alertlist"
+    }
+]

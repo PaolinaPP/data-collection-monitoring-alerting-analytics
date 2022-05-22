@@ -3,6 +3,9 @@
 import argparse
 import json
 from os import path
+import load_templates
+import sys
+sys.path.append("..")
 from restapp.libraries.measurements import MEASUREMENTS
 
 TEMPLATES_DIR = 'grafana-templates'
@@ -18,24 +21,12 @@ def check_for_supported_measurements(measurements):
             help_message()
             exit()
 
-def get_row_template():
-    with open(path.join(TEMPLATES_DIR, 'row.json')) as f:
-        return json.load(f)
-
-def get_panel_template():
-    with open(path.join(TEMPLATES_DIR, 'panel.json')) as f:
-        return json.load(f)
-
-def get_dashboard_template():
-    with open(path.join(TEMPLATES_DIR, 'measurements_dashboard.json')) as f:
-        return json.load(f)
-
 def get_dashboard_path():
-    return path.join('provisioning', 'dashboards', 'Measurements.json')
+    return path.join('..', 'provisioning', 'dashboards', 'Measurements.json')
 
 def add_measurement_in_dashboard(measurement, final_dashboard):
-    row_template = get_row_template()
-    panel_template = get_panel_template()
+    row_template = load_templates.get_row_template()
+    panel_template = load_templates.get_graph_template()
     panels_len = len(final_dashboard["panels"])
     row_template["title"] = measurement
     row_template["id"] = panels_len+1
@@ -51,7 +42,7 @@ def add_measurement_in_dashboard(measurement, final_dashboard):
 
 def create_dashboard(given_measurements):
     check_for_supported_measurements(given_measurements)
-    final_dashboard = get_dashboard_template()
+    final_dashboard = load_templates.get_dashboard_template()
     for measurement in given_measurements:
         final_dashboard = add_measurement_in_dashboard(measurement,
                                                        final_dashboard)
