@@ -5,47 +5,23 @@ import json
 from os import path
 
 TEMPLATES_DIR = 'grafana-templates'
+DASHBOARDS_CONF = '/../dashboards.json'
+ROW = 'row.json'
+GRAPH = 'graph.json'
+BAR_GAUGE = 'bar_gauge.json'
+GAUGE = 'gauge.json'
+HEAT_MAP = 'heat_map.json'
+PIE_CHART = 'pie_chart.json'
+STAT = 'stat.json'
+TABLE = 'table.json'
+TARGET = 'target.json'
+TIME_SERIES = 'time_series.json'
+MEASUREMENTS_DASHBOARD = 'measurements_dashboard.json'
 
-def get_row_template():
-    with open(path.join(TEMPLATES_DIR, 'row.json')) as f:
+def load_template(file):
+    with open(path.join(TEMPLATES_DIR, file)) as f:
         return json.load(f)
 
-def get_graph_template():
-    with open(path.join(TEMPLATES_DIR, 'graph.json')) as f:
-        return json.load(f)
-
-def get_bar_gauge_template():
-    with open(path.join(TEMPLATES_DIR, 'bar_gauge.json')) as f:
-        return json.load(f)
-
-def get_gauge_template():
-    with open(path.join(TEMPLATES_DIR, 'gauge.json')) as f:
-        return json.load(f)
-
-def get_heat_map_template():
-    with open(path.join(TEMPLATES_DIR, 'heat_map.json')) as f:
-        return json.load(f)
-
-def get_pie_chart_template():
-    with open(path.join(TEMPLATES_DIR, 'pie_chart.json')) as f:
-        return json.load(f)
-
-def get_stat_template():
-    with open(path.join(TEMPLATES_DIR, 'stat.json')) as f:
-        return json.load(f)
-
-def get_table_template():
-    with open(path.join(TEMPLATES_DIR, 'table.json')) as f:
-        return json.load(f)
-
-def get_target_template():
-    with open(path.join(TEMPLATES_DIR, 'target.json')) as f:
-        return json.load(f)
-
-def get_time_series_template():
-    with open(path.join(TEMPLATES_DIR, 'time_series.json')) as f:
-        return json.load(f)
-
-def get_dashboard_template():
-    with open(path.join(TEMPLATES_DIR, 'measurements_dashboard.json')) as f:
+def load_dashboard_visualizations():
+    with open(path.dirname(__file__) + DASHBOARDS_CONF) as f:
         return json.load(f)

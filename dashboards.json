@@ -1,0 +1,12 @@
+{
+    "visualizations":[
+        {
+            "type": "graph",
+            "measurement": "temperature"
+        },
+        {
+            "type": "graph",
+            "measurement": "cpu"
+        }
+    ]
+}
