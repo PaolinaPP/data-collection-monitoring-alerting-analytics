@@ -5,33 +5,33 @@
     "dashes": false,
     "datasource": null,
     "fieldConfig": {
-    "defaults": {},
-    "overrides": []
+        "defaults": {},
+        "overrides": []
     },
     "fill": 1,
     "fillGradient": 0,
     "gridPos": {
-    "h": 8,
-    "w": 12,
-    "x": 0,
-    "y": 1
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
     },
     "hiddenSeries": false,
     "id": 2,
     "legend": {
-    "avg": false,
-    "current": false,
-    "max": false,
-    "min": false,
-    "show": true,
-    "total": false,
-    "values": false
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
     },
     "lines": true,
     "linewidth": 1,
     "nullPointMode": "null",
     "options": {
-    "alertThreshold": true
+        "alertThreshold": true
     },
     "percentage": false,
     "pluginVersion": "7.5.7",
@@ -43,13 +43,13 @@
     "stack": false,
     "steppedLine": false,
     "targets": [
-    {
-        "exemplar": true,
-        "expr": "empty{}",
-        "interval": "",
-        "legendFormat": "",
-        "refId": "A"
-    }
+        {
+            "exemplar": true,
+            "expr": "empty{}",
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+        }
     ],
     "thresholds": [],
     "timeFrom": null,
@@ -57,38 +57,38 @@
     "timeShift": null,
     "title": "empty",
     "tooltip": {
-    "shared": true,
-    "sort": 0,
-    "value_type": "individual"
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
     },
     "type": "graph",
     "xaxis": {
-    "buckets": null,
-    "mode": "time",
-    "name": null,
-    "show": true,
-    "values": []
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
     },
     "yaxes": [
-    {
-        "format": "short",
-        "label": null,
-        "logBase": 1,
-        "max": null,
-        "min": null,
-        "show": true
-    },
-    {
-        "format": "short",
-        "label": null,
-        "logBase": 1,
-        "max": null,
-        "min": null,
-        "show": true
-    }
+        {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+        },
+        {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+        }
     ],
     "yaxis": {
-    "align": false,
-    "alignLevel": null
+        "align": false,
+        "alignLevel": null
     }
 }
