@@ -1,12 +1,123 @@
 {
     "visualizations":[
         {
-            "type": "graph",
-            "measurement": "temperature"
+            "type": "gauge",
+            "name": "Data Gauge",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                }
+            ],
+            "analitics": true
         },
         {
             "type": "graph",
-            "measurement": "cpu"
+            "name": "Data Graph",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                }
+            ],
+            "analitics": true
+        },
+        {
+            "type": "bar_gauge",
+            "name": "Data Bar_Gauge",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                }
+            ],
+            "analitics": true
+        },
+        {
+            "type": "heat_map",
+            "name": "Data Heat_Map",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                },
+                {
+                    "type": "cpu"
+                }
+            ],
+            "analitics": true
+        },
+        {
+            "type": "pie_chart",
+            "name": "Data Pie_Chart",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                },
+                {
+                    "type": "cpu"
+                }
+            ],
+            "analitics": true
+        },
+        {
+            "type": "stat",
+            "name": "Data Stat",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                },
+                {
+                    "type": "cpu"
+                }
+            ],
+            "analitics": true
+        },
+        {
+            "type": "table",
+            "name": "Data Table",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                },
+                {
+                    "type": "cpu"
+                }
+            ],
+            "analitics": true
+        },
+        {
+            "type": "time_series",
+            "name": "Data Time_Series",
+            "measurements": [
+                {
+                    "type": "temperature"
+                },
+                {
+                    "type": "humidity"
+                },
+                {
+                    "type": "cpu"
+                }
+            ],
+            "analitics": true
         }
     ]
 }

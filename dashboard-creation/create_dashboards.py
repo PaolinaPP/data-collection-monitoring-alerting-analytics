@@ -27,25 +27,23 @@ def create_dashboard():
     final_dashboard = load_temp.load_template(load_temp.MEASUREMENTS_DASHBOARD)
 
     for visual in dashboard_config["visualizations"]:
-        print(visual["type"])
+        print(visual["measurements"])
         if visual["type"] == "bar_gauge":
-            final_dashboard = dashboard.add_bar_gauge(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_bar_gauge(visual, final_dashboard)
         elif visual["type"] == "gauge":
-            final_dashboard = dashboard.add_gauge(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_gauge(visual, final_dashboard)
         elif visual["type"] == "graph":
-            final_dashboard = dashboard.add_graph(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_graph(visual, final_dashboard)
         elif visual["type"] == "heat_map":
-            final_dashboard = dashboard.add_heat_map(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_heat_map(visual, final_dashboard)
         elif visual["type"] == "pie_chart":
-            final_dashboard = dashboard.add_pie_chart(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_pie_chart(visual, final_dashboard)
         elif visual["type"] == "stat":
-            final_dashboard = dashboard.add_stat(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_stat(visual, final_dashboard)
         elif visual["type"] == "table":
-            final_dashboard = dashboard.add_table(visual["measurement"], final_dashboard)
-        elif visual["type"] == "target":
-            final_dashboard = dashboard.add_target(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_table(visual, final_dashboard)
         elif visual["type"] == "time_series":
-            final_dashboard = dashboard.add_time_series(visual["measurement"], final_dashboard)
+            final_dashboard = dashboard.add_time_series(visual, final_dashboard)
 
     with open(get_dashboard_path(), 'w') as f:
         json.dump(final_dashboard, f)

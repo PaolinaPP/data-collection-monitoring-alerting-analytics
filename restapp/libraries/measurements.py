@@ -3,7 +3,5 @@
 MEASUREMENTS = [
     "temperature", 
     "humidity",
-    "temperature_kitchen",
-    "temperature_bedroom",
-    "temperature_livingroom"     
+    "cpu"
 ]
