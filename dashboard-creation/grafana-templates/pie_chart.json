@@ -1,84 +1,53 @@
-[
-    {
-        "datasource": null,
-        "fieldConfig": {
-            "defaults": {
-                "color": {
-                    "mode": "palette-classic"
-                },
-                "mappings": [],
-                "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                        {
-                            "color": "green",
-                            "value": null
-                        },
-                        {
-                            "color": "red",
-                            "value": 80
-                        }
-                    ]
-                }
+{
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {
+            "color": {
+                "mode": "palette-classic"
             },
-            "overrides": []
+            "mappings": [],
+            "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                    {
+                        "color": "green",
+                        "value": null
+                    },
+                    {
+                        "color": "red",
+                        "value": 80
+                    }
+                ]
+            }
         },
-        "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-        },
-        "id": 4,
-        "options": {
-            "displayLabels": [],
-            "legend": {
-                "displayMode": "list",
-                "placement": "right",
-                "values": []
-            },
-            "pieType": "pie",
-            "reduceOptions": {
-                "calcs": [
-                    "lastNotNull"
-                ],
-                "fields": "",
-                "values": false
-            },
-            "text": {}
-        },
-        "pluginVersion": "7.5.7",
-        "targets": [],
-        "timeFrom": null,
-        "timeShift": null,
-        "title": "Panel Title",
-        "type": "piechart"
+        "overrides": []
     },
-    {
-        "dashboardFilter": "",
-        "dashboardTags": [],
-        "datasource": null,
-        "fieldConfig": {
-            "defaults": {},
-            "overrides": []
+    "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+    },
+    "id": 2,
+    "options": {
+        "displayLabels": [],
+        "legend": {
+            "displayMode": "list",
+            "placement": "right",
+            "values": []
         },
-        "folderId": null,
-        "gridPos": {
-            "h": 9,
-            "w": 12,
-            "x": 0,
-            "y": 8
+        "pieType": "pie",
+        "reduceOptions": {
+            "calcs": [
+                "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
         },
-        "id": 2,
-        "limit": 10,
-        "nameFilter": "",
-        "onlyAlertsOnDashboard": false,
-        "pluginVersion": "7.5.7",
-        "show": "current",
-        "sortOrder": 1,
-        "stateFilter": [],
-        "targets": [],
-        "title": "Panel Title",
-        "type": "alertlist"
-    }
-]
+        "text": {}
+    },
+    "pluginVersion": "7.5.7",
+    "targets": [],
+    "title": "Panel Title",
+    "type": "piechart"
+}

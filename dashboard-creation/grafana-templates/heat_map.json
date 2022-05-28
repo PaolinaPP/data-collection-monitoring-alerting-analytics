@@ -1,60 +1,58 @@
-[
-    {
-        "cards": {
-            "cardPadding": null,
-            "cardRound": null
-        },
-        "color": {
-            "cardColor": "#b4ff00",
-            "colorScale": "sqrt",
-            "colorScheme": "interpolateOranges",
-            "exponent": 0.5,
-            "mode": "spectrum"
-        },
-        "dataFormat": "timeseries",
-        "datasource": null,
-        "fieldConfig": {
-            "defaults": {},
-            "overrides": []
-        },
-        "gridPos": {
-            "h": 9,
-            "w": 12,
-            "x": 0,
-            "y": 0
-        },
-        "heatmap": {},
-        "hideZeroBuckets": false,
-        "highlightCards": true,
-        "id": 2,
-        "legend": {
-            "show": false
-        },
-        "pluginVersion": "7.5.7",
-        "reverseYBuckets": false,
-        "targets": [],
-        "title": "Panel Title",
-        "tooltip": {
-            "show": true,
-            "showHistogram": false
-        },
-        "type": "heatmap",
-        "xAxis": {
-            "show": true
-        },
-        "xBucketNumber": null,
-        "xBucketSize": null,
-        "yAxis": {
-            "decimals": null,
-            "format": "short",
-            "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true,
-            "splitFactor": null
-        },
-        "yBucketBound": "auto",
-        "yBucketNumber": null,
-        "yBucketSize": null
-    }
-]
+{
+    "cards": {
+        "cardPadding": null,
+        "cardRound": null
+    },
+    "color": {
+        "cardColor": "#b4ff00",
+        "colorScale": "sqrt",
+        "colorScheme": "interpolateOranges",
+        "exponent": 0.5,
+        "mode": "spectrum"
+    },
+    "dataFormat": "timeseries",
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+    },
+    "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+    },
+    "heatmap": {},
+    "hideZeroBuckets": false,
+    "highlightCards": true,
+    "id": 2,
+    "legend": {
+        "show": false
+    },
+    "pluginVersion": "7.5.7",
+    "reverseYBuckets": false,
+    "targets": [],
+    "title": "Panel Title",
+    "tooltip": {
+        "show": true,
+        "showHistogram": false
+    },
+    "type": "heatmap",
+    "xAxis": {
+        "show": true
+    },
+    "xBucketNumber": null,
+    "xBucketSize": null,
+    "yAxis": {
+        "decimals": null,
+        "format": "short",
+        "logBase": 1,
+        "max": null,
+        "min": null,
+        "show": true,
+        "splitFactor": null
+    },
+    "yBucketBound": "auto",
+    "yBucketNumber": null,
+    "yBucketSize": null
+}

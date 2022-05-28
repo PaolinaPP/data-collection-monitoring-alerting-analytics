@@ -42,15 +42,7 @@
     "spaceLength": 10,
     "stack": false,
     "steppedLine": false,
-    "targets": [
-        {
-            "exemplar": true,
-            "expr": "empty{}",
-            "interval": "",
-            "legendFormat": "",
-            "refId": "A"
-        }
-    ],
+    "targets": [],
     "thresholds": [],
     "timeFrom": null,
     "timeRegions": [],

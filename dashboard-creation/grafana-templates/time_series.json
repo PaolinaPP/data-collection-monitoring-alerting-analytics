@@ -1,84 +1,69 @@
-[
-    {
-        "datasource": null,
-        "fieldConfig": {
-            "defaults": {
-                "color": {
-                    "mode": "palette-classic"
-                },
-                "custom": {
-                    "axisLabel": "",
-                    "axisPlacement": "auto",
-                    "barAlignment": 0,
-                    "drawStyle": "line",
-                    "fillOpacity": 10,
-                    "gradientMode": "none",
-                    "hideFrom": {
-                        "graph": false,
-                        "legend": false,
-                        "tooltip": false
-                    },
-                    "lineInterpolation": "linear",
-                    "lineWidth": 1,
-                    "pointSize": 5,
-                    "scaleDistribution": {
-                        "type": "linear"
-                    },
-                    "showPoints": "never",
-                    "spanNulls": true
-                },
-                "mappings": [],
-                "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                        {
-                            "color": "green",
-                            "value": null
-                        },
-                        {
-                            "color": "red",
-                            "value": 80
-                        }
-                    ]
-                },
-                "unit": "short"
+{
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {
+            "color": {
+                "mode": "palette-classic"
             },
-            "overrides": []
-        },
-        "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-        },
-        "id": 4,
-        "options": {
-            "graph": {},
-            "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom"
+            "custom": {
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 10,
+                "gradientMode": "none",
+                "hideFrom": {
+                    "graph": false,
+                    "legend": false,
+                    "tooltip": false
+                },
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                    "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": true
             },
-            "tooltipOptions": {
-                "mode": "single"
-            }
+            "mappings": [],
+            "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                    {
+                        "color": "green",
+                        "value": null
+                    },
+                    {
+                        "color": "red",
+                        "value": 80
+                    }
+                ]
+            },
+            "unit": "short"
         },
-        "pluginVersion": "7.5.7",
-        "timeFrom": null,
-        "timeShift": null,
-        "title": "Panel Title",
-        "type": "timeseries"
+        "overrides": []
     },
-    {
-        "datasource": null,
-        "gridPos": {
-            "h": 1,
-            "w": 24,
-            "x": 0,
-            "y": 8
+    "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+    },
+    "id": 2,
+    "options": {
+        "graph": {},
+        "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom"
         },
-        "id": 2,
-        "title": "Row title",
-        "type": "row"
-    }
-]
+        "tooltipOptions": {
+            "mode": "single"
+        }
+    },
+    "pluginVersion": "7.5.7",
+    "targets": [],
+    "title": "Panel Title",
+    "type": "timeseries"
+}

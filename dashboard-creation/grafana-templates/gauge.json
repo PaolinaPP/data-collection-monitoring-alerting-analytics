@@ -1,65 +1,48 @@
-[
-    {
-        "datasource": null,
-        "fieldConfig": {
-            "defaults": {
-                "color": {
-                    "mode": "thresholds"
-                },
-                "mappings": [],
-                "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                        {
-                            "color": "green",
-                            "value": null
-                        },
-                        {
-                            "color": "red",
-                            "value": 80
-                        }
-                    ]
-                },
-                "unit": "short"
+{
+    "datasource": null,
+    "fieldConfig": {
+        "defaults": {
+            "color": {
+                "mode": "thresholds"
             },
-            "overrides": []
+            "mappings": [],
+            "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                    {
+                        "color": "green",
+                        "value": null
+                    },
+                    {
+                        "color": "red",
+                        "value": 80
+                    }
+                ]
+            }
         },
-        "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-        },
-        "id": 4,
-        "options": {
-            "orientation": "auto",
-            "reduceOptions": {
-                "calcs": [
-                    "lastNotNull"
-                ],
-                "fields": "",
-                "values": false
-            },
-            "showThresholdLabels": false,
-            "showThresholdMarkers": true,
-            "text": {}
-        },
-        "pluginVersion": "7.5.7",
-        "timeFrom": null,
-        "timeShift": null,
-        "title": "Panel Title",
-        "type": "gauge"
+        "overrides": []
     },
-    {
-        "datasource": null,
-        "gridPos": {
-            "h": 1,
-            "w": 24,
-            "x": 0,
-            "y": 8
+    "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+    },
+    "id": 2,
+    "options": {
+        "reduceOptions": {
+            "calcs": [
+                "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
         },
-        "id": 2,
-        "title": "Row title",
-        "type": "row"
-    }
-]
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+    },
+    "pluginVersion": "7.5.7",
+    "targets": [],
+    "title": "Panel Title",
+    "type": "gauge"
+}
