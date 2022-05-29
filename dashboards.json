@@ -9,6 +9,9 @@
                 },
                 {
                     "type": "humidity"
+                },
+                {
+                    "type": "cpu"
                 }
             ],
             "analitics": true
@@ -74,12 +77,16 @@
         {
             "type": "stat",
             "name": "Data Stat",
+            "__comment": {
+                "mean": "Shows avarage of all values.",
+                "max": "Shows max value of all values.",
+                "min": "Shows min value of all values.",
+                "lastNotNull": "Shows last received value."
+            },
+            "calcs": "max",
             "measurements": [
                 {
                     "type": "temperature"
-                },
-                {
-                    "type": "humidity"
                 },
                 {
                     "type": "cpu"

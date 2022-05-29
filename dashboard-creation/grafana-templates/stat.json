@@ -3,7 +3,7 @@
     "fieldConfig": {
         "defaults": {
             "color": {
-                "mode": "thresholds"
+                "mode": "palette-classic"
             },
             "mappings": [],
             "thresholds": {
@@ -32,7 +32,7 @@
     "options": {
         "colorMode": "value",
         "graphMode": "area",
-        "justifyMode": "auto",
+        "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
             "calcs": [
@@ -42,7 +42,7 @@
             "values": false
         },
         "text": {},
-        "textMode": "auto"
+        "textMode": "value_and_name"
     },
     "pluginVersion": "7.5.7",
     "targets": [],
