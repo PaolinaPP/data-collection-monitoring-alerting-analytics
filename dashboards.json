@@ -1,130 +1,154 @@
-{
-    "visualizations":[
-        {
-            "type": "gauge",
-            "name": "Data Gauge",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                },
-                {
-                    "type": "cpu"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "graph",
-            "name": "Data Graph",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "bar_gauge",
-            "name": "Data Bar_Gauge",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "heat_map",
-            "name": "Data Heat_Map",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                },
-                {
-                    "type": "cpu"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "pie_chart",
-            "name": "Data Pie_Chart",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                },
-                {
-                    "type": "cpu"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "stat",
-            "name": "Data Stat",
-            "__comment": {
-                "mean": "Shows avarage of all values.",
-                "max": "Shows max value of all values.",
-                "min": "Shows min value of all values.",
-                "lastNotNull": "Shows last received value."
+[
+    {
+        "name": "Measurements",
+        "visualizations": [
+            {
+                "type": "gauge",
+                "name": "Data Gauge",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
             },
-            "calcs": "max",
-            "measurements": [
-                {
-                    "type": "temperature"
+            {
+                "type": "graph",
+                "name": "Data Graph",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    }
+                ],
+                "analitics": true
+            },
+            {
+                "type": "bar_gauge",
+                "name": "Data Bar_Gauge",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    }
+                ],
+                "analitics": true
+            },
+            {
+                "type": "heat_map",
+                "name": "Data Heat_Map",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
+            },
+            {
+                "type": "pie_chart",
+                "name": "Data Pie_Chart",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
+            },
+            {
+                "type": "stat",
+                "name": "Data Stat",
+                "__comment": {
+                    "mean": "Shows avarage of all values.",
+                    "max": "Shows max value of all values.",
+                    "min": "Shows min value of all values.",
+                    "lastNotNull": "Shows last received value."
                 },
-                {
-                    "type": "cpu"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "table",
-            "name": "Data Table",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                },
-                {
-                    "type": "cpu"
-                }
-            ],
-            "analitics": true
-        },
-        {
-            "type": "time_series",
-            "name": "Data Time_Series",
-            "measurements": [
-                {
-                    "type": "temperature"
-                },
-                {
-                    "type": "humidity"
-                },
-                {
-                    "type": "cpu"
-                }
-            ],
-            "analitics": true
-        }
-    ]
-}
+                "calcs": "max",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
+            },
+            {
+                "type": "table",
+                "name": "Data Table",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
+            },
+            {
+                "type": "time_series",
+                "name": "Data Time_Series",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
+            }
+        ]
+    },
+    {
+        "name": "Dashboard2",
+        "visualizations": [
+            {
+                "type": "gauge",
+                "name": "Data Gauge",
+                "measurements": [
+                    {
+                        "type": "temperature"
+                    },
+                    {
+                        "type": "humidity"
+                    },
+                    {
+                        "type": "cpu"
+                    }
+                ],
+                "analitics": true
+            }
+        ]
+    }
+]
