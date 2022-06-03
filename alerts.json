@@ -1,0 +1,20 @@
+[
+    {
+        "type": "temperature",
+        "max": 30,
+        "min": 15,
+        "repeat": 1
+    },
+    {
+        "type": "humidity",
+        "max": 20,
+        "min": 15,
+        "repeat": 1
+    },
+    {
+        "type": "cpu",
+        "max": 30,
+        "min": 15,
+        "repeat": 1
+    }
+]

@@ -24,6 +24,9 @@ def check_for_correct_measurement(measurement):
 def post():
     global to_sleep
     data = json.loads(request.data)
+    response = requests.post('http://127.0.0.1:2020', data = json.dumps(data))
+    if response != 200:
+        abort(500)
     for measurement in data["measurements"]:
         if not check_for_correct_measurement(measurement):
             print("Unsupported measurement {}".format(measurement["measurement"]))

@@ -49,3 +49,13 @@ services:
         volumes:
             - ./restapp:/usr/src/app
             - /etc/localtime:/etc/localtime
+    alert_manager:
+        container_name: alert_manager
+        build: ./alert_manager
+        network_mode: host
+        ports:
+            - "2020:2020"
+        volumes:
+            - ./alert_manager:/usr/src/alertmanager
+            - ./alerts.json:/usr/src/alertmanager/alerts.json
+            - /etc/localtime:/etc/localtime
