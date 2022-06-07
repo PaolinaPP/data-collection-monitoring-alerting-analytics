@@ -4,6 +4,7 @@ import json
 from os import path
 import load_templates as load_temp
 import add_to_dashboard as dashboard
+import analytics_dashboard as analytics
 import sys
 sys.path.append("..")
 from restapp.libraries.measurements import MEASUREMENTS
@@ -24,6 +25,7 @@ def get_dashboard_path(dashboard):
 
 def create_dashboard():
     dashboard_config = load_temp.load_dashboard_visualizations()
+    dashboard_config.append(analytics.fill_analytics_measurements())
     for dash in range(len(dashboard_config)):
         final_dashboard = load_temp.load_template(load_temp.MEASUREMENTS_DASHBOARD)
         final_dashboard["title"] = dashboard_config[dash]["name"]

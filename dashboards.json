@@ -14,9 +14,11 @@
                     },
                     {
                         "type": "cpu"
+                    },
+                    {
+                        "type": "storage"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "graph",
@@ -28,8 +30,7 @@
                     {
                         "type": "humidity"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "bar_gauge",
@@ -41,8 +42,7 @@
                     {
                         "type": "humidity"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "heat_map",
@@ -57,8 +57,7 @@
                     {
                         "type": "cpu"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "pie_chart",
@@ -73,8 +72,7 @@
                     {
                         "type": "cpu"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "stat",
@@ -85,7 +83,6 @@
                     "min": "Shows min value of all values.",
                     "lastNotNull": "Shows last received value."
                 },
-                "calcs": "max",
                 "measurements": [
                     {
                         "type": "temperature"
@@ -93,8 +90,7 @@
                     {
                         "type": "cpu"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "table",
@@ -109,8 +105,7 @@
                     {
                         "type": "cpu"
                     }
-                ],
-                "analitics": true
+                ]
             },
             {
                 "type": "time_series",
@@ -125,8 +120,7 @@
                     {
                         "type": "cpu"
                     }
-                ],
-                "analitics": true
+                ]
             }
         ]
     },
@@ -146,8 +140,7 @@
                     {
                         "type": "cpu"
                     }
-                ],
-                "analitics": true
+                ]
             }
         ]
     }

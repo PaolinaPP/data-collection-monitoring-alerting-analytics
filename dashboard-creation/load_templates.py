@@ -5,6 +5,7 @@ from os import path
 
 TEMPLATES_DIR = 'grafana-templates'
 DASHBOARDS_CONF = '/../dashboards.json'
+ANALYTICS_CONF = '/../analytics.json'
 ROW = 'row.json'
 GRAPH = 'graph.json'
 BAR_GAUGE = 'bar_gauge.json'
@@ -23,4 +24,8 @@ def load_template(file):
 
 def load_dashboard_visualizations():
     with open(path.dirname(__file__) + DASHBOARDS_CONF) as f:
+        return json.load(f)
+
+def load_analytics_conf():
+    with open(path.dirname(__file__) + ANALYTICS_CONF) as f:
         return json.load(f)

@@ -1,0 +1,16 @@
+{
+    "measurements": [
+        {
+            "type": "temperature"
+        },
+        {
+            "type": "humidity"
+        },
+        {
+            "type": "cpu"
+        },
+        {
+            "type": "storage"
+        }
+    ]
+}

@@ -3,5 +3,6 @@
 MEASUREMENTS = [
     "temperature", 
     "humidity",
-    "cpu"
+    "cpu",
+    "storage"
 ]

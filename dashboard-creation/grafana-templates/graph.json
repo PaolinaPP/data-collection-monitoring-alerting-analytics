@@ -19,6 +19,7 @@
     "hiddenSeries": false,
     "id": 2,
     "legend": {
+        "alignAsTable": false,
         "avg": false,
         "current": false,
         "max": false,

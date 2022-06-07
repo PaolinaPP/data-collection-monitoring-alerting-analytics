@@ -1,21 +1,24 @@
 {
     "notifier": "slack",
-    "webhookurl": "https://hooks.slack.com/services/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",
+    "webhookurl": "https://hooks.slack.com/services/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",
     "alert_rules": [
         {
             "type": "temperature",
             "max": 25,
-            "min": 23
+            "min": 15,
+            "repeat": 1
         },
         {
             "type": "humidity",
             "max": 25,
-            "min": 15
+            "min": 15,
+            "repeat": 2
         },
         {
             "type": "cpu",
             "max": 25,
-            "min": 15
+            "min": 15,
+            "repeat": 3
         }
     ]
 }
