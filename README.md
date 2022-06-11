@@ -1,4 +1,4 @@
-# iot-data-collection-and-monitoring
+# data-collection-monitoring-alerting-analytics
 
 ## Description
 This project provides a system which Collects, Stores and Monitors IOT Data.

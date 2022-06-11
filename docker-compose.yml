@@ -1,5 +1,14 @@
 version: "3.4"
 services:
+    dashboard_creation:
+        container_name: dashboard_creation
+        build: ./dashboard_creation
+        network_mode: host
+        volumes:
+            - "./provisioning:/usr/src/provisioning"
+            - ./dashboard_creation:/usr/src/dashboard_creation
+            - ./dashboards.json:/usr/src/dashboards.json
+            - ./analytics.json:/usr/src/analytics.json
     minio:
         image: minio/minio
         container_name: minio

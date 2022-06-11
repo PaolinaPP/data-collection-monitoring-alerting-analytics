@@ -5,20 +5,6 @@ from os import path
 import load_templates as load_temp
 import add_to_dashboard as dashboard
 import analytics_dashboard as analytics
-import sys
-sys.path.append("..")
-from restapp.libraries.measurements import MEASUREMENTS
-
-def help_message():
-    print("Dashboards are not created.")
-    print("Supported measurements: {}".format(MEASUREMENTS))
-
-def check_for_supported_measurements(measurements):
-    for item in measurements:
-        if item not in MEASUREMENTS:
-            print('{} unsupported measurement.'.format(item))
-            help_message()
-            exit()
 
 def get_dashboard_path(dashboard):
     return path.join('..', 'provisioning', 'dashboards', dashboard+".json")
